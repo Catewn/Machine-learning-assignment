@@ -3,16 +3,11 @@ import pandas as pd
 import numpy as np
 import time
 
-st.title('Banking Churn Prediction')
+st.title('Customer Churn Prediction')
 st.header('Data Visualization')
 
 Data = pd.read_csv(r"C:\Users\User\Desktop\Machine-learning-assignment\banking_churn.csv")
 print(Data.head())
-
-
-# To visualize the plots
-import matplotlib.pyplot as plt
-import plotly.express as px
 
 # from backend import initial_cleaning
 from PIL import Image
@@ -43,7 +38,7 @@ with col2:
         st.image(image, caption='Graphical Representation of data by customer Geographical location')
 
 st.header('Feature Importance')
-st.subheader('Feature that predict customer churn')
+st.subheader("Features that predict customer's probability to  churn")
 image = Image.open('hist_featureimportance.png')
 st.image(image, caption='Graphical Representation of Feature Importance')
 
